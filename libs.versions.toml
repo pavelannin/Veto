@@ -3,7 +3,7 @@ android-gradlePlugin = "9.0.1"
 android-minSdk = "21"
 android-compileSdk = "36"
 kotlin-language = "2.3.10"
-vanniktechMavenPublish = "0.34.0"
+vanniktechMavenPublish = "0.36.0"
 
 [libraries]
 kotlin-multiplatform = { module = "org.jetbrains.kotlin.multiplatform:org.jetbrains.kotlin.multiplatform.gradle.plugin", version.ref = "kotlin-language" }
