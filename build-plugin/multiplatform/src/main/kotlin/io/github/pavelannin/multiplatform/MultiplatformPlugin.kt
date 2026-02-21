@@ -32,7 +32,6 @@ class MultiplatformPlugin : Plugin<Project> {
             iosX64()
             iosArm64()
             iosSimulatorArm64()
-            linuxX64()
 
             with(extensions.getByType<KotlinMultiplatformAndroidLibraryExtension>()) {
                 compileSdk {
