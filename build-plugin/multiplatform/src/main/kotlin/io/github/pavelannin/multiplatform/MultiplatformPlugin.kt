@@ -45,6 +45,7 @@ class MultiplatformPlugin : Plugin<Project> {
             }
 
             sourceSets.all {
+                languageSettings.enableLanguageFeature("ContextParameters")
                 languageSettings.optIn("kotlin.contracts.ExperimentalContracts")
             }
         }
