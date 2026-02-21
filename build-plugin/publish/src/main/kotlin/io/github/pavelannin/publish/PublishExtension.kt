@@ -1,6 +1,8 @@
 package io.github.pavelannin.publish
 
+import org.gradle.api.artifacts.MinimalExternalModuleDependency
+import org.gradle.api.provider.Provider
+
 open class PublishExtension {
-    lateinit var artifactId: String
-    lateinit var version: String
+    lateinit var artifact: Provider<MinimalExternalModuleDependency>
 }

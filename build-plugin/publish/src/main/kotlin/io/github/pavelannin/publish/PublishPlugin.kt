@@ -25,9 +25,11 @@ class PublishPlugin : Plugin<Project> {
                 extensions.configure<MavenPublishBaseExtension> {
                     publishToMavenCentral()
                     signAllPublications()
-                    coordinates("io.github.pavelannin", ext.artifactId, ext.version)
+
+                    val artifact = ext.artifact.get()
+                    coordinates(artifact.group, artifact.name, artifact.version)
                     pom {
-                        name.set(ext.artifactId)
+                        name.set(artifact.name)
                         description.set("A lightweight, feature flagging library for Kotlin Multiplatform. Control your app's destiny with simple toggles, seamless cross-platform integration, and instant feature rollout. Command your code, enforce your rules, and say \"Veto\" to complexity.")
                         inceptionYear.set("2026")
                         url.set("https://github.com/pavelannin/Veto")
