@@ -1,18 +1,25 @@
 [versions]
+project-core = "0.1.0"
+
 android-gradlePlugin = "9.0.1"
 android-minSdk = "21"
 android-compileSdk = "36"
 kotlin-language = "2.3.10"
+kotlin-coroutines = "1.10.2"
 vanniktechMavenPublish = "0.36.0"
 
 [libraries]
+project-core = { module = "io.github.pavelannin:veto-core", version.ref = "project-core" }
+
 kotlin-multiplatform = { module = "org.jetbrains.kotlin.multiplatform:org.jetbrains.kotlin.multiplatform.gradle.plugin", version.ref = "kotlin-language" }
+kotlin-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlin-coroutines" }
 android-multiplatform-library = { module = "com.android.kotlin.multiplatform.library:com.android.kotlin.multiplatform.library.gradle.plugin", version.ref = "android-gradlePlugin" }
 vanniktech-mavenPublish = { module = "com.vanniktech:gradle-maven-publish-plugin", version.ref = "vanniktechMavenPublish" }
 
 [plugins]
+project-publish = { id = "io.github.pavelannin.publish" }
+project-multiplatform = { id = "io.github.pavelannin.multiplatform" }
+
 android-kotlin-multiplatform-library = { id = "com.android.kotlin.multiplatform.library", version.ref = "android-gradlePlugin" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin-language" }
 vanniktech-mavenPublish = { id = "com.vanniktech.maven.publish", version.ref = "vanniktechMavenPublish" }
-project-publish = { id = "io.github.pavelannin.publish" }
-project-multiplatform = { id = "io.github.pavelannin.multiplatform" }

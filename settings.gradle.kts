@@ -28,3 +28,7 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Veto"
+
+include(
+    ":core",
+)
